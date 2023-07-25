@@ -1,2 +1,2 @@
 # programs
-simple programs builded with programming concepts
+Programas simples feitos com conceitos de PE e POO, respeitando boas práticas.
