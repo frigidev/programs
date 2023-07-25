@@ -36,7 +36,6 @@ function capturarEntradaUsuario() {
 
     leitura.question("Digite a sua altura em metros: ", (altura) => {
         leitura.question("Digite o seu peso em quilogramas: ", (peso) => {
-	     
             calculadora.calcularIMC(parseFloat(altura), parseFloat(peso));
         });
     });
