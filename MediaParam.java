@@ -1,3 +1,5 @@
+//Programa calcula a média de um aluno em três provas e exibe uma mensagem com a situação do aluno nessa disciplina
+
 import java.util.Scanner;
 
 public class MediaParam {
