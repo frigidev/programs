@@ -32,10 +32,10 @@ public class MediaParam {
         double resultado = calcularMedia(nota1, nota2, nota3);
         System.out.println("A media eh: " + resultado);
 
-        if (resultado >= 7) {
+        if(resultado >= 7) {
             System.out.println("Aprovado");
         } else {
-            if (resultado < 4) {
+            if(resultado < 4) {
                 System.out.println("Reprovado");
             } else {
                 System.out.println("Prova Final");
