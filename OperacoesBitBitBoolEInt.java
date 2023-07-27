@@ -17,7 +17,7 @@ public class OperacoesBitBitBoolEInt {
 
         try {
             n1 = Integer.parseInt(entrada1);
-        } catch (NumberFormatException e) {
+        } catch(NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "O valor digitado não é um número inteiro.");
             return;
         }
@@ -29,7 +29,7 @@ public class OperacoesBitBitBoolEInt {
 
         try {
             n2 = Integer.parseInt(entrada2);
-        } catch (NumberFormatException e) {
+        } catch(NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "O valor digitado não é um número inteiro.");
             return;
         }
