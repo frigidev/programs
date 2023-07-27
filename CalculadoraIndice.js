@@ -1,3 +1,8 @@
+/*
+    Programa que recebe o valor da altura e do peso do usuário e calcula o seu IMC (Índice de Massa Corporal) e exibe seu valor em inteiro
+    e uma mensagem correspondente às recomendações para aquele IMC que a pessoa possui.
+*/
+
 const readline = require('readline');
 
 class CalculadoraIndice {
