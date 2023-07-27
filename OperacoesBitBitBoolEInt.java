@@ -7,7 +7,7 @@
 import javax.swing.*;
 
 public class OperacoesBitBitBoolEInt {
-    public static void InteirosConvertidosBinario() {
+    public static void inteirosConvertidosBinario() {
 
         JOptionPane.showMessageDialog(null, "A seguir entre com dois números inteiros para" +
                 " serem realizadas as operações bit a bit AND, OR e XOR com esses números.");
@@ -84,6 +84,6 @@ public class OperacoesBitBitBoolEInt {
                 "O valor de x OR y é: " + b + "\n" +
                 "O valor de x XOR y é: " + c + "\n");
 
-        InteirosConvertidosBinario();
+        inteirosConvertidosBinario();
     }
 }
