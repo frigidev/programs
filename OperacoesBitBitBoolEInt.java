@@ -72,8 +72,8 @@ public class OperacoesBitBitBoolEInt {
         boolean y =! x; // x NOT / y = false
 
         boolean a = x & y; // x AND y em nível lógico
-        boolean b = x | y; // x | y em nível lógico
-        boolean c = x ^ y; // x ^ y em nível lógico
+        boolean b = x | y; // x OR y em nível lógico
+        boolean c = x ^ y; // x XOR y em nível lógico
 
         JOptionPane.showMessageDialog(null,
         "O valor de x é: true, e o de y é false." + "\n\n" +
