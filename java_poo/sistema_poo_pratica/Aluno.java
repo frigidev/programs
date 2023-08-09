@@ -2,7 +2,7 @@ package sistema_poo_pratica;
 
 public abstract class Aluno extends Pessoa implements Media {
 
-	private double prova, teste;
+    private double prova, teste;
 	
     protected void setProva(double prova) {
         this.prova = prova;
