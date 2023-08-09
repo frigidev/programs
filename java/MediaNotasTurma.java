@@ -1,3 +1,5 @@
+//Programa recebe e armazena os nomes e as notas de 10 alunos em uma prova e exibe a média da turma nessa prova
+
 package programs.java;
 
 import java.util.Scanner;
