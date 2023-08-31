@@ -96,7 +96,7 @@ public class OperacoesBitBitBoolEInt {
         //Operações booleanas com operadores bit a bit
 
         boolean x = true;
-        boolean y =! x; // x NOT / y = false
+        boolean y =! x; // x NOT y = false
 
         boolean a = x & y; // x AND y em nível lógico
         boolean b = x | y; // x | y em nível lógico
