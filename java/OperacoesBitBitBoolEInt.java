@@ -34,7 +34,7 @@ public class OperacoesBitBitBoolEInt {
             JOptionPane.showMessageDialog(null, "O valor digitado não é um número inteiro.");
             return;
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Ocorreu um erro.");
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro.");
             return;
         }
 
@@ -49,7 +49,7 @@ public class OperacoesBitBitBoolEInt {
             JOptionPane.showMessageDialog(null, "O valor digitado não é um número inteiro.");
             return;
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Ocorreu um erro.");
+            JOptionPane.showMessageDialog(null, "Ocorreu um erro.");
             return;
         }
 
