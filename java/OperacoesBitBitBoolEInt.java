@@ -9,6 +9,7 @@ package programs.java;
 import javax.swing.*;
 
 public class OperacoesBitBitBoolEInt {
+    
     public static void inteirosOperacoesBinarias() {
 
         String msg1 = "A seguir entre com dois números inteiros para serem realizadas as operações bit a bit AND, OR e XOR com esses números.";
@@ -32,16 +33,23 @@ public class OperacoesBitBitBoolEInt {
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "O valor digitado não é um número inteiro.");
             return;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro.");
+            return;
         }
 
         String binario1 = Integer.toBinaryString(n1);
 
         String entrada2 = JOptionPane.showInputDialog("Digite o valor do primeiro número: ");
         int n2;
+
         try {
             n2 = Integer.parseInt(entrada2);
         } catch (NumberFormatException e) {
             JOptionPane.showMessageDialog(null, "O valor digitado não é um número inteiro.");
+            return;
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Ocorreu um erro.");
             return;
         }
 
@@ -96,11 +104,11 @@ public class OperacoesBitBitBoolEInt {
         //Operações booleanas com operadores bit a bit
 
         boolean x = true;
-        boolean y =! x; // x NOT y = false
+        boolean y =! x; // x NOT / y = false
 
         boolean a = x & y; // x AND y em nível lógico
-        boolean b = x | y; // x OR y em nível lógico
-        boolean c = x ^ y; // x XOR y em nível lógico
+        boolean b = x | y; // x | y em nível lógico
+        boolean c = x ^ y; // x ^ y em nível lógico
 
         buffer1.append(msg2);
         buffer1.append(y);
