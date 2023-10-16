@@ -1,7 +1,7 @@
 # programs
 **Programas simples feitos com conceitos de PE e POO.**
 
-**Esse é um espaço que separei para armazenar e versionar os meus programas em Java e JavaScript.**
+**Esse é um espaço que separei para armazenar e atualizar os meus programas em Java e JavaScript.**
 
 ***Os programas Java podem ser executados em uma IDE (Eclipse, IntelliJ) ou pelo Terminal (Prompt de Comando). <br>
 Necessário uma versão atualizada do JDK instalada na máquina. <br> <br>
