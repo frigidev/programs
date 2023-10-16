@@ -1,4 +1,4 @@
-//Programa calcula a média de um aluno em três provas e exibe uma mensagem com a situação do aluno nessa disciplina
+//Programa possui uma simples logica que calcula a média de um aluno em três provas e exibe uma mensagem com a situação do aluno nessa disciplina.
 
 package programs.java;
 
