@@ -17,21 +17,30 @@ public class MediaParam {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Insira a primeira nota: ");
-        double nota1 = input.nextDouble();
+        double nota1 = 0;
+        double nota2 = 0;
+        double nota3 = 0;
 
-        System.out.println("Insira a segunda nota: ");
-        double nota2 = input.nextDouble();
+            try {
+                System.out.println("Insira a primeira nota: ");
+                nota1 = input.nextDouble();
 
-        System.out.println("Insira a terceira nota: ");
-        double nota3 = input.nextDouble();
+                System.out.println("Insira a segunda nota: ");
+                nota2 = input.nextDouble();
 
-        if (nota1 > 10 || nota2 > 10 || nota3 > 10) {
-            System.out.println("Insira uma nota valida");
-            System.exit(0);
-        } else if (nota1 < 0 || nota2 < 0 || nota3 < 0) {
-            System.out.println("Insira uma nota valida");
-            System.exit(0);
+                System.out.println("Insira a terceira nota: ");
+                nota3 = input.nextDouble();
+            }catch(Exception e) {
+                System.out.println("Ocorreu um erro.");
+                return;
+            }
+
+        if(nota1 < 0 || nota2 < 0 || nota3 < 0) {
+            System.out.println("Você digitou alguma nota inválida.");
+            return;
+        }else if(nota1 > 10 || nota2 > 10 || nota3 > 10){
+            System.out.println("Você digitou alguma nota inválida.");
+            return;
         }
 
         double resultado = calcularMedia(nota1, nota2, nota3);
