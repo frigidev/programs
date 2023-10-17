@@ -21,19 +21,19 @@ public class MediaParam {
         double nota2 = 0;
         double nota3 = 0;
 
-            try {
-                System.out.println("Insira a primeira nota: ");
-                nota1 = input.nextDouble();
+        try {
+            System.out.println("Insira a primeira nota: ");
+            nota1 = input.nextDouble();
 
-                System.out.println("Insira a segunda nota: ");
-                nota2 = input.nextDouble();
+            System.out.println("Insira a segunda nota: ");
+            nota2 = input.nextDouble();
 
-                System.out.println("Insira a terceira nota: ");
-                nota3 = input.nextDouble();
-            }catch(Exception e) {
-                System.out.println("Ocorreu um erro.");
-                return;
-            }
+            System.out.println("Insira a terceira nota: ");
+            nota3 = input.nextDouble();
+        }catch(Exception e) {
+            System.out.println("Ocorreu um erro.");
+            return;
+        }
 
         if(nota1 < 0 || nota2 < 0 || nota3 < 0) {
             System.out.println("Você digitou alguma nota inválida.");
