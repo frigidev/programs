@@ -1,7 +1,6 @@
 /*
  * 
- * Um minigame de adivinhação. O programa foi desenvolvido para praticar e demonstrar conceitos de vetores e do algoritmo de
- * busca binária.
+ * A guessing game. The program was developed to practice and demosntrate concepts of arrays and the binary search algorithm.
  * 
  */
 
@@ -11,112 +10,112 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] entrada) {
+	public static void main(String[] args) {
 	
-		Scanner leitura = new Scanner(System.in);
+		Scanner read = new Scanner(System.in);
 		
-		BuscaBinaria buscaBinaria = new BuscaBinaria();
+		BinarySearch binarySearch = new BinarySearch();
 		
-		System.out.println("Digite a quantidade de números da sua lista:\n");
-		int numero = leitura.nextInt();
-		var vetorCriado = buscaBinaria.criaVetor(numero);
+		System.out.println("Type the numbers amount of your list:\n");
+		int number = read.nextInt();
+		var arrayCreated = binarySearch.createArray(number);
 		
-		var elementoSoma = buscaBinaria.somaVetor(vetorCriado);
+		var sumElement = binarySearch.sumArray(arrayCreated);
 
-		var vetorPreenchido = buscaBinaria.preencheDinamicamente(vetorCriado, elementoSoma);
+		var filledArray = binarySearch.fillDinamically(arrayCreated, sumElement);
 		
-		System.out.println("\nTente encontrar um número gerado na lista, digitando-o abaixo:\n");
-		int buscado = leitura.nextInt();
-		buscaBinaria.buscaBinaria(vetorPreenchido, buscado);
+		System.out.println("\nTry to find a number generated in the list, typing him below:\n");
+		int searched = read.nextInt();
+		binarySearch.binarySearch(filledArray, searched);
 		
-		System.out.println("\nOs números da lista eram:\n");
-		buscaBinaria.imprimeVetor(vetorPreenchido);
+		System.out.println("\nThe list numbers was:\n");
+		binarySearch.printArray(filledArray);
 		
-		leitura.close();
+		read.close();
 		
 	}		
 }
 
-class BuscaBinaria implements VetoresMetodos{
+class BinarySearch implements ArrayMethods{
 	
-	//método cria um vetor vazio do tamanho que o usuário inserir e retorna esse vetor
+	//method create an empty array of the size which the user type and return this array
 	@Override
-	public int[] criaVetor(int numero) {
-		int vetor[] = new int[numero];
-		System.out.println("\nA lista com " + vetor.length + " números foi criada.");
-		return vetor;
+	public int[] createArray(int number) {
+		int array[] = new int[number];
+		System.out.println("\nThe list with " + array.length + " numbers was created.");
+		return array;
 	}
 	
-	//método preenche os espaços do vetor criado pelo usuário multiplicando por inteiros pares e depois soma os valores 
-	//dos elementos e retorna essa soma
+	//method fill the spaces of the array created by the user multiplying for pairs integers and after sum the values 
+	//of the elements and return this sum
 	@Override
-	public int somaVetor(int[] vetor){
-		int elemento = 0;
-		int pares = 0;
-		for(int i=0; i<vetor.length; i++) {
-			vetor[i] = i * pares;
-			elemento = elemento + vetor[i];
-			pares += 2;
+	public int sumArray(int[] array){
+		int element = 0;
+		int pairs = 0;
+		for(int i=0; i<array.length; i++) {
+			array[i] = i * pairs;
+			element = element + array[i];
+			pairs += 2;
 		}
-		return elemento;
+		return element;
 	}
 	
-	//método preenche os espaços do vetor criado pelo usuário, pegando a soma do metódo somaVetor() e multiplicando essa
-	//soma por números ímpares de acordo com o tamanho do vetor e retorna o vetor preenchido
+	//method fill the spaces of the array created by the user, taking the sum of the method sumArray() and multiplying this
+	//sum for odd numbers according to the size of the array and return this array filled
 	@Override
-	public int[] preencheDinamicamente(int[] vetor, int elementoSoma) {
+	public int[] fillDinamically(int[] array, int elementSum) {
 		int j = 1;
-		for(int i=0; i<vetor.length; i++) {
-			vetor[i] = elementoSoma*j;
+		for(int i=0; i<array.length; i++) {
+			array[i] = elementSum*j;
 			j += 2;
 		}
-		return vetor;
+		return array;
 	}
 	
-	//método imprime os elementos do vetor que o usuário criou
+	//method prints the elements of the array which the user created
 	@Override
-	public void imprimeVetor(int[] vetor) {
-		for(int i=0; i<vetor.length; i++) {
-			System.out.println(vetor[i]);
+	public void printArray(int[] array) {
+		for(int i=0; i<array.length; i++) {
+			System.out.println(array[i]);
 		}
 	}
 	
-	//método realiza a busca dos elementos do vetor, que foram criados de forma ordenada, portanto, a busca binária,
-	//um algoritmo de complexidade O(log n) funciona perfeitamente nessa situação, independente do tamanho do vetor que o
-	//usuário criar, conseguindo buscar a informação de forma eficiente
+	//method realize the search of elements in the array, that was created in a sorted form, so, the binary search, 
+	//an algorithm with complexity O(log n) works perfectly good in this situation, no matter the size of the array
+	//which the user create, searching the information efficiently
 	@Override
-	public void buscaBinaria(int vetor[], int buscado) {
-		int inicio = 0, meio, fim = vetor.length - 1;
-		boolean achou = false;
-		while(inicio <= fim) {
-			meio = ((int) (inicio + fim) / 2);
-			if(vetor[meio] == buscado) {
-				achou = true;
+	public void binarySearch(int array[], int searched) {
+		int begin = 0, mid, end = array.length - 1;
+		boolean found = false;
+		while(begin <= end) {
+			mid = ((int) (begin + end) / 2);
+			if(array[mid] == searched) {
+				found = true;
 				break;
-			}else if(buscado > vetor[meio]) {
-				inicio = meio + 1;
+			}else if(searched > array[mid]) {
+				begin = mid + 1;
 			}else {
-				fim = meio - 1;
+				end = mid - 1;
 			}
 		}
-		if(achou) {
-			System.out.println("\nO número foi encontrado na lista.");
+		if(found) {
+			System.out.println("\nThe number was found in the list.");
 		}else {
-			System.out.println("\nO número não existe na lista.");
+			System.out.println("\nThe number doesn't exist in the list.");
 		}
 	}
 }
 	
-interface VetoresMetodos {
+interface ArrayMethods {
 	
-	public int[] criaVetor(int numero);
+	public int[] createArray(int number);
 	
-	public int somaVetor(int[] vetor);
+	public int sumArray(int[] array);
 	
-	public int[] preencheDinamicamente(int vetor[], int elementoSoma);
+	public int[] fillDinamically(int array[], int elementSum);
 	
-	public void imprimeVetor(int[] vetor);
+	public void printArray(int[] array);
 	
-	public void buscaBinaria(int vetor[], int buscado);
+	public void binarySearch(int array[], int searched);
 	
 }
