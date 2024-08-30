@@ -1,6 +1,6 @@
 /*
   Resolution of the problem 226 of Leetcode Invert Binary Tree, where given a binary tree,
-  the method must return that tree inverted. Beats 96.53% in space complexity.
+  the method must return that tree inverted.
 */
 
 class Solution {
@@ -10,7 +10,7 @@ class Solution {
     }
 
     private void invert(TreeNode root) {
-        if(root == null || root.left == root.right) {
+        if(root == null) {
             return;
         }
 
